@@ -16,9 +16,16 @@ function data(task) {
     `
 }
 
+btn1 && btn1.addEventListener('click', function() {
+    cards.style.display = "none";
+})
+
 button && button.addEventListener('click', function(event) {
     event.preventDefault();
 
     let input = data(task);
     cards.innerHTML += input;
 })
+
+
+localStorage.setItem('cards', JSON.stringify("task"))
