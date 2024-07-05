@@ -4,8 +4,9 @@ const cards = document.getElementById("cards");
 const task = document.getElementById("task");
 const btn1 = document.getElementById("btn1");
 const btn2 =document.getElementById("btn2");
+const container = document.getElementById("container");
 
-function data() {
+function data(task) {
     return `
         <div class="card">
             <h1 class="task_name">${task.value}</h1>
@@ -18,5 +19,6 @@ function data() {
 button && button.addEventListener('click', function(event) {
     event.preventDefault();
 
-    
+    let input = data(task);
+    cards.innerHTML += input;
 })
